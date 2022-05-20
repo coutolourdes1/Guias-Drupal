@@ -1,4 +1,4 @@
-#Actualizacion base de datos y files
+# Actualizacion base de datos y files
 
 Crear a la altura de web la carpeta backups, dentro prod:
 
@@ -29,12 +29,12 @@ Para actualizar la base de datos primero:
     drush cr
     (Limpia el cache)
 
-#Si existen updates...
+# Si existen updates...
 
     leer updates base de datos.md
 
 
-#Backup de la base de datos y files
+# Backup de la base de datos y files
 
 En la carpeta creada al principio se utilizará una carpeta local donde se colocará el backup de la base de datos y files
 
