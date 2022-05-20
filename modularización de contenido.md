@@ -37,5 +37,5 @@ Si vamos a modularizar un contenido que no hayamos creado aun, una buena idea es
     type: Tipo de contenido que se alberga, module, theme, profile... en este caso module.
     core_version_requirement: Version de drupal en la que correrá el módulo.
     dependencies: Dependencias necesarias para el correcto funcionamiento del módulo, 
-    pueden pertenecer al core, en ese caso se llaman "drupal:NombreModule" o 
+    pueden pertenecer al core, en ese caso se llaman _"drupal:NombreModule"_ o 
     pertenecer a otro modulo custom, en ese caso "ModuloCustom:ModuloCustom"
