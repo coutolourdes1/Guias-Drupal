@@ -32,10 +32,14 @@ Si vamos a modularizar un contenido que no hayamos creado aun, una buena idea es
         
     ```
     
-    name: Corresponde al nombre que mostrará el módulo al buscarlo para instalar
-    description: Breve descripción de que es o su funcionamiento
+    name: Corresponde al nombre que mostrará el módulo al buscarlo para instalar.
+    
+    description: Breve descripción de que es o su funcionamiento.
+    
     type: Tipo de contenido que se alberga, module, theme, profile... en este caso module.
+    
     core_version_requirement: Version de drupal en la que correrá el módulo.
+    
     dependencies: Dependencias necesarias para el correcto funcionamiento del módulo, 
-    pueden pertenecer al core, en ese caso se llaman _"drupal:NombreModule"_ o 
+    pueden pertenecer al core, en ese caso se llaman "drupal:NombreModule" o 
     pertenecer a otro modulo custom, en ese caso "ModuloCustom:ModuloCustom"
