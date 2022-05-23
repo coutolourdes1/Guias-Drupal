@@ -16,7 +16,7 @@ En caso de tener archivos para instalar ejecutar los siguientes comandos
     (Esto eliminará los archivos actuales de la carpeta files)
 
     tar -xf backups/prod/files.tar.gz -C ./
-    (Esto descomprimirá el los archivos en backups/prod y los colocará en web/sites/default/files/)
+    (Esto descomprimirá los archivos en backups/prod y los colocará en web/sites/default/files/)
   
 Para actualizar la base de datos primero:
 
