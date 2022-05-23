@@ -10,7 +10,7 @@ Dentro de la carpeta prod se guardará la base de datos con el nombre db.sql
 
 Además, se puede en esta carpeta colocar los files.
 
-En caso de tener archivos para instalar ejecutar los siguientes comandosÑ
+En caso de tener archivos para instalar ejecutar los siguientes comandos
 
     rm -rf web/sites/default/files/* 
     (Esto eliminará los archivos actuales de la carpeta files)
