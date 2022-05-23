@@ -43,3 +43,5 @@ Si vamos a modularizar un contenido que no hayamos creado aun, una buena idea es
     dependencies: Dependencias necesarias para el correcto funcionamiento del módulo, 
     pueden pertenecer al core, en ese caso se llaman "drupal:NombreModule" o 
     pertenecer a otro modulo custom, en ese caso "ModuloCustom:ModuloCustom"
+   
+...
