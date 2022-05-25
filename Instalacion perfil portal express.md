@@ -41,7 +41,9 @@ Ejemplo:
 	"extra": {
 		"patches-file": "web/profiles/contrib/isa/composer.patches.json",
 	...
-```
+``` 
+ Eliminar el archivo composer.lock
+
  Ejecutar el comando
 
 	composer install
