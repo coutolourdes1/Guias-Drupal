@@ -38,7 +38,7 @@ el visualizador de plantillas, siguiendo los pasos siguientes:
 
     En la carpeta /sites deberemos agregar (o modificar) el archivo development.services.yml, quedandonos de la siguiente manera:
 	
-    ```json
+```json
         parameters:
           http.response.debug_cacheability_headers: true
           twig.config:
@@ -48,7 +48,7 @@ el visualizador de plantillas, siguiendo los pasos siguientes:
         services:
           cache.backend.null:
             class: Drupal\Core\Cache\NullBackendFactory
-     ```
+```
      
     Esto nos activa la depuración twig.
 
