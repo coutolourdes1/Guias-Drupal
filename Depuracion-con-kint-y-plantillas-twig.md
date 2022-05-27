@@ -52,3 +52,35 @@ el visualizador de plantillas, siguiendo los pasos siguientes:
      
     Esto nos activa la depuración twig.
 
+    Posterior a esto en la carpeta /sites/default/ crearemos (o modificaremos) el archivo settings.local.php, quedandonos de la siguiente manera:
+    
+```json
+        <?php
+	assert_options(ASSERT_ACTIVE, TRUE);
+	\Drupal\Component\Assertion\Handle::register();
+	$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+	$config['system.logging']['error_level'] = 'verbose';
+	$config['system.performance']['css']['preprocess'] = FALSE;
+	$config['system.performance']['js']['preprocess'] = FALSE;
+	$settings['cache']['bins']['render'] = 'cache.backend.null';
+	$settings['cache']['bins']['discovery_migration'] = 'cache.backend.memory';
+	$settings['cache']['bins']['page'] = 'cache.backend.null';
+	$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+	$settings['rebuild_access'] = TRUE;
+	$settings['skip_permissions_hardening'] = TRUE;
+```
+	
+    Con esto requerimos el aerchivo anterior y activamos configuraciones, como por ejemplo, desactivar el cache dinámico, interno,
+    agregacción de css y js, etc.
+    
+    Lo que nos faltaría ahora simplemente sería descomentar (o agregar) las siguientes lineas en el settings.php:
+    
+    	if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+	  include $app_root . '/' . $site_path . '/settings.local.php';
+	}
+
+# Recomendación
+
+Se recomienda instalar además el modulo twig_tweak, que mejora la experiencia de desarrollo con twigÑ
+
+    composer require drupal/twig_tweak
