@@ -11,6 +11,8 @@ Para instalar kint necesitamos previamente instalar el módulo devel, para ello 
     
     drush en devel devel-generate
     
+    Más sobre devel ---> leer (Herramientas-para-desarrollo-backend.md)
+    
 Posterior a esto instalamos el kint para depurar usando devel:
 
     composer require kint-php/kint
