@@ -71,14 +71,15 @@ el visualizador de plantillas, siguiendo los pasos siguientes:
 	$settings['skip_permissions_hardening'] = TRUE;
 ```
 	
-    Con esto requerimos el aerchivo anterior y activamos configuraciones, como por ejemplo, desactivar el cache dinámico, interno,
+    Con esto requerimos el archivo anterior y activamos configuraciones, como por ejemplo, desactivar el cache dinámico, interno,
     agregacción de css y js, etc.
     
     Lo que nos faltaría ahora simplemente sería descomentar (o agregar) las siguientes lineas en el settings.php:
     
-    	if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-	  include $app_root . '/' . $site_path . '/settings.local.php';
-	}
+
+    if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+      include $app_root . '/' . $site_path . '/settings.local.php';
+    }
 
 # Recomendación
 
