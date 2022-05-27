@@ -52,7 +52,8 @@ el visualizador de plantillas, siguiendo los pasos siguientes:
      
     Esto nos activa la depuración twig.
 
-    Posterior a esto en la carpeta /sites/default/ crearemos (o modificaremos) el archivo settings.local.php, quedandonos de la siguiente manera:
+    Posterior a esto en la carpeta /sites/default/ crearemos (o modificaremos) el archivo settings.local.php, quedandonos 
+    de la siguiente manera:
     
 ```json
         <?php
