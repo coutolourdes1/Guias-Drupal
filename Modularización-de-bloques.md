@@ -61,6 +61,7 @@ Adicional a esto, es necesario agregar una configuracion mas, la cual sera defau
 		    - e0af1c39-d8b1-4d22-8371-f0a41f065447
 ```   
 Donde block_content lleva dentro de si todas las configuraciones que se encuentran en la carpeta test/content/block_content, "e0af1c39-d8b1-4d22-8371-f0a41f065447" es en este caso el nombre del archivo que el módulo generó para este bloque.
+
 En caso de tener otros tipos de entidades deben estar a la altura de block_content, por ejemplo, node.
 
 Posterior a esto restaría instalar y probar que todo funcione.
