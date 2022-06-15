@@ -1,4 +1,4 @@
-#  Modularización de bloques áóíúé
+#  Modularización de bloques
 
 Los bloques son entidades de contenido, por lo cual no podemos de forma secilla guardarlas o impactarlas en una base de datos a traves de hooks_updates 
 como haciamos con taxonomias, menus, etc.., las cuales son entidades de configuración.
@@ -26,3 +26,19 @@ ver algo por el estilo:
     
 Donde el número 1 representa el ID del bloque, si editáramos el siguiente bloque creado apacería un número de ID 2.
 
+Una vez localizado el ID del bloque que queremos guardar como configuración, volvemos a nuestra consola de comandos y ejecutamos:
+
+    ddev drush dcer block_content 1 --folder=profiles/contrib/XXX/modules/custom/test/content
+    
+Donde block_content representa el tipo de entidad a guardar, 1 el ID, y el --folder es la carpeta donde se alojará la configuración.
+    
+drush dcer a diferencia de drush dce exporta todas las configuraciones y sus referencias
+
+# Otros tipos de entidades posibles
+
+    $ drush dce node <node id>
+    $ drush dce taxonomy_term <taxonomy term id> 
+    $ drush dce file <file id> 
+    $ drush dce media <media id>
+    $ drush dce menu_link_content <menu link id>
+    $ drush dce block_content <block id>
