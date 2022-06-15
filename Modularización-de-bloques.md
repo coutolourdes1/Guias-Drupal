@@ -34,6 +34,36 @@ Donde block_content representa el tipo de entidad a guardar, 1 el ID, y el --fol
     
 drush dcer a diferencia de drush dce exporta todas las configuraciones y sus referencias
 
+# Creación y ejecución del módulo.
+
+Una vez tenemos en este caso la carpeta test/content lo que nos queda es crear el .info para que el módulo pueda funcionar y ser instalado.
+Dentro de test.info.yml deberiamos tener una estructura como esta:
+
+```json
+	name: 'module name'
+    type: module
+    description: 'module description'
+    core_version_requirement: '^8.9 || ^9'
+    package: 'name'
+```        
+Adicional a esto, es necesario agregar una configuracion mas, la cual sera default-content:
+
+```json
+	name: 'module name'
+    type: module
+    description: 'module description'
+    core_version_requirement: '^8.9 || ^9'
+    package: 'name'
+    
+    default_content:
+        block_content:
+            - e0af1c39-d8b1-4d22-8371-f0a41f065447
+```   
+Donde block_content lleva dentro de si todas las configuraciones que se encuentran en la carpeta test/content/block_content, "e0af1c39-d8b1-4d22-8371-f0a41f065447" es en este caso el nombre del archivo que el módulo generó para este bloque.
+En caso de tener otros tipos de entidades deben estar a la altura de block_content, por ejemplo, node.
+
+Posterior a esto restaría instalar y probar que todo funcione.
+
 # Otros tipos de entidades posibles
 
     $ drush dce node <node id>
