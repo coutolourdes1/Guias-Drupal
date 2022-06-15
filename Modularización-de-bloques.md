@@ -28,9 +28,10 @@ Donde el número 1 representa el ID del bloque, si editáramos el siguiente bloq
 
 Una vez localizado el ID del bloque que queremos guardar como configuración, volvemos a nuestra consola de comandos y ejecutamos:
 
-    ddev drush dcer block_content 1 --folder=profiles/contrib/XXX/modules/custom/test/content
+    ddev drush dcer block_content 1 --folder=profiles/contrib/XXX/modules/custom/nombre_modulo/content
     
 Donde block_content representa el tipo de entidad a guardar, 1 el ID, y el --folder es la carpeta donde se alojará la configuración.
+En este caso usaremos como nombre_modulo, test.
     
 drush dcer a diferencia de drush dce exporta todas las configuraciones y sus referencias
 
@@ -40,24 +41,24 @@ Una vez tenemos en este caso la carpeta test/content lo que nos queda es crear e
 Dentro de test.info.yml deberiamos tener una estructura como esta:
 
 ```json
-	name: 'module name'
-    type: module
-    description: 'module description'
-    core_version_requirement: '^8.9 || ^9'
-    package: 'name'
+	    name: 'module name'
+	    type: module
+	    description: 'module description'
+	    core_version_requirement: '^8.9 || ^9'
+	    package: 'name'
 ```        
 Adicional a esto, es necesario agregar una configuracion mas, la cual sera default-content:
 
 ```json
-	name: 'module name'
-    type: module
-    description: 'module description'
-    core_version_requirement: '^8.9 || ^9'
-    package: 'name'
-    
-    default_content:
-        block_content:
-            - e0af1c39-d8b1-4d22-8371-f0a41f065447
+	    name: 'module name'
+	    type: module
+	    description: 'module description'
+	    core_version_requirement: '^8.9 || ^9'
+	    package: 'name'
+
+	    default_content:
+		block_content:
+		    - e0af1c39-d8b1-4d22-8371-f0a41f065447
 ```   
 Donde block_content lleva dentro de si todas las configuraciones que se encuentran en la carpeta test/content/block_content, "e0af1c39-d8b1-4d22-8371-f0a41f065447" es en este caso el nombre del archivo que el módulo generó para este bloque.
 En caso de tener otros tipos de entidades deben estar a la altura de block_content, por ejemplo, node.
